@@ -9,6 +9,7 @@ def filter_on_income(df, income : int):
 def filter_chol(df, chol: str):
     return df.filter(col("HighCholest_Group") == chol)
 
+# this is just a dev env
 df = read_health_silver_table()
 
 df_filtred = (df.transform(filter_on_income, income=70000)
